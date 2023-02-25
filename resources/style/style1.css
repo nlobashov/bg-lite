@@ -1,0 +1,298 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+@font-face {
+	font-family: Munchkin; /* Гарнитура шрифта */
+	src: url(/resources/fonts/munchkin.ttf); /* Путь к файлу со шрифтом */
+}
+
+body {
+	font-family: Trebuchet MS;
+	font-size: 16px;
+	background-image: url(/resources/img/background.jpg);
+}
+
+header {
+	width: 100%;
+	background: #431e15;
+	padding: 10px;
+}
+
+nav a {
+	color: #fff;
+	display: inline-block;
+	padding: 5px 10px;
+}
+
+nav a.logo {
+	font-family: Munchkin;
+	font-size: 24px;
+	color: #f1cd99;
+}
+
+nav a:hover {
+	color: #f1cd99;
+}
+
+a {
+	text-decoration: none;
+}
+
+.main {
+	width: 1000px;
+	margin: 50px auto;
+}
+
+form.reg {
+	width: 100%;
+	padding: 20px;
+	text-align: center;
+}
+
+form.reg input {
+	background: #ecc285;
+	color: #431e15;
+	font-family: "Trebuchet MS";
+	box-shadow: 0 0 1px 1px rgb(0 0 0 / 20%) inset;
+	display: block;
+	margin: 10px auto;
+	width: 50%;
+	padding: 15px;
+	text-align: center;
+	font-size: 16px;
+	border-radius: 15px;
+	border: none;
+}
+
+form.reg input::placeholder {
+	color: #431e15;
+	font-family: "Trebuchet MS";
+}
+
+form.reg input:focus {
+	outline: none;
+}
+
+form.reg input[type="submit"] {
+	border-radius: 15px;
+	border: none;
+	color: #fff;
+	background-color: #431e15;
+	cursor: pointer;
+}
+
+form.reg input[type="submit"]:hover {
+	color: #f1cd99;
+}
+
+/* Стили для LeaderBoard */
+.wrapper-table-players,
+.wrapper {
+	margin: 0 auto;
+	width: 700px;
+	padding: 20px;
+	background-color: #431e15;
+	box-shadow: 0 0 10px rgba(0,0,0,0.5);
+	border-radius: 30px;
+}
+
+.content {
+	width: 100%;
+	background-color: #f1cd99;
+	/*box-shadow: 0 0 10px rgba(0,0,0,0.5);*/
+	border-radius: 15px;
+	padding: 50px 30px;
+}
+
+.content > .row {
+	width: 100%;
+	height: 150px;
+	margin-bottom: 20px;
+	background-color: #ffdba7;
+	border-radius: 10px;
+	display: flex;
+	flex-direction: row;
+	padding: 10px 20px;
+	box-shadow: 0 6px 10px -4px rgba(0, 0, 0, .3);
+}
+
+.content > .row:hover {
+	box-shadow: 0 12px 10px -4px rgba(0, 0, 0, .3);
+}
+
+.content > h2 {
+	font-family: Munchkin;
+	color: #431e15;
+	text-align: center;
+	font-size: 42px;
+	margin-bottom: 10px;
+}
+
+.content .row p {
+	color: #431e15; 
+}
+
+.row > div {
+	height: 100%;
+	padding: 5px;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+  	justify-content: center;
+}
+
+
+.block-name {
+	flex: 6 0 0;
+	align-items: flex-start !important;
+	padding-left: 50px;
+/*	background-color: green;*/
+}
+
+.block-name > .full-name {
+	padding-left: 20px;
+}
+
+.block-avatar {
+	flex: 4 0 0;
+/*	background-color: orange;*/
+}
+
+.block-avatar > img {
+	height: 100%;
+	border-radius: 50%;
+}
+
+.block-statistics {
+	flex: 2 0 0;
+/*	background-color: red;*/
+}
+
+.block-name p:first-child {
+	font-size: 30px;
+
+	font-family: Munchkin;
+	font-weight: bold;
+}
+
+p.rating {
+	font-size: 20px;
+	font-weight: bold;
+	background-color: #33CC00;/*#431e15;*/
+	padding: 5px 20px;
+	color:  #fff !important;
+	margin-top: 5px;
+}
+
+/* Buttons */
+a.btn-new-player,
+a.btn-back {
+	width: 20%;
+	margin: 10px auto 20px;
+	color: #fff;
+	font-family: Munchkin;
+	font-size: 20px;
+	background: #522e25;
+	border-radius: 5px;
+	padding: 5px 10px;
+	text-align: center;
+	display: block;
+	padding: 5px;
+/*	border: 3px solid #431e15;*/
+}
+
+a.btn-new-player:hover,
+a.btn-back:hover {
+	color: #ffdead;
+	background: #6e4d44;
+}
+
+/* Notice */
+.notice-success {
+	color: #228B22;
+	text-align: center;
+}
+
+.notice-fail {
+	color: #ff0000;
+	text-align: center;
+}
+
+.wrapper-table-players {
+	width: 100%;
+}
+/* BEGIN Table Players*/
+.table__players {
+	width: 100%;
+	border-spacing: 5px;
+}
+
+.table__players th,
+.table__players td {
+	line-height: 3;
+	padding: 0 15px;
+	border: 1px solid #be975f;
+}
+
+.table__players th {
+	background: #522e25;
+	color: #ffdead;
+	text-align: center;
+}
+
+.table__players td {
+	background: #ffdead;
+	text-align: left;
+}
+
+.table__players tr:hover > td.column-hover {
+	background: #ffe3bb;
+}
+
+td.column-id,
+td.table__btn-edit,
+td.table__btn-delete {
+	text-align: center;
+}
+
+td > a {
+	display: block;
+	text-align: center;
+}
+
+a.table__btn-delete {
+	background: #522e25;
+}
+
+a.table__btn-edit {
+	background: #ecc285;
+}
+
+a.table__btn-delete:hover {
+	background: #6e4d44;
+	cursor: pointer;
+}
+
+a.table__btn-edit:hover {
+	background: #dbb583;
+	cursor: pointer;
+}
+
+a.table__btn-delete {
+	color: #ffdead;
+}
+
+a.table__btn-edit {
+	color: #522e25;
+	font-weight: bold;
+	height: 100%;
+}
+
+td.column-button {
+	padding: 0;
+}
+
+/* END Table Players*/

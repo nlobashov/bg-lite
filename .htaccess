@@ -1,0 +1,9 @@
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule .* index.php [L]
+
+#AuthName "For WhatASoft"
+#AuthType Basic
+#AuthUserFile /home/public_html/.htpasswd
+#require valid-user
